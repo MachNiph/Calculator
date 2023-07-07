@@ -18,7 +18,9 @@ number.forEach((item) => {
       var length = firstoperand.innerHTML.length;
       firstoperand.innerHTML = firstoperand.innerHTML.substring(0, length - 1);
       try {
-        secondoperand.innerHTML = eval(firstoperand.innerHTML);
+        if (firstoperand.innerHTML.length > 1)
+          secondoperand.innerHTML = eval(firstoperand.innerHTML);
+        else sreturn;
       } catch (error) {
         secondoperand.innerHTML = "";
         console.log(error);
