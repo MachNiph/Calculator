@@ -8,7 +8,7 @@ number.forEach((item) => {
       try {
         secondoperand.innerHTML = eval(firstoperand.innerHTML);
       } catch (error) {
-        secondoperand.innerHTML = "Idiot";
+        secondoperand.innerHTML = "";
         console.log(error);
       }
     } else if (item.value == "AC") {
@@ -17,6 +17,12 @@ number.forEach((item) => {
     } else if (item.value == "Del") {
       var length = firstoperand.innerHTML.length;
       firstoperand.innerHTML = firstoperand.innerHTML.substring(0, length - 1);
+      try {
+        secondoperand.innerHTML = eval(firstoperand.innerHTML);
+      } catch (error) {
+        secondoperand.innerHTML = "";
+        console.log(error);
+      }
     } else {
       firstoperand.innerHTML += item.value;
     }
