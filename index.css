@@ -10,7 +10,7 @@
   justify-content: center;
   align-content: center;
   min-height: 100vh;
-  background-color: rgb(112, 104, 104);
+  background: radial-gradient(circle, rgb(134, 134, 134), rgb(239, 237, 237));
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 }
@@ -21,24 +21,36 @@
   border: 1px solid white;
   background-color: rgba(34, 23, 23, 0.274);
   color: white;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
 .container button:hover {
-  background-color: rgba(106, 38, 38, 0.1);
+  background-color: rgba(68, 26, 26, 0.1);
+  border: none;
+  font-size: 2.5rem;
 }
 
-.span-two {
+.container .span-two {
   grid-column: span 2;
+  background-color: white;
+  color: black;
+}
+
+.container .span-two:hover {
+  background-color: rgb(231, 235, 235);
 }
 
 .operands {
   grid-column: 1/-1;
-  background-color: rgba(255, 252, 252, 0.251);
+  background-color: rgba(32, 30, 30, 0.251);
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: flex-end;
   word-break: break-all;
+  border-radius: 15px;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.359);
 }
 
 .operands .first-operand {
@@ -49,4 +61,8 @@
 .operands .second-operand {
   color: rgb(219, 211, 211);
   font-size: 1.5rem;
+}
+
+.container .symbol {
+  color: rgb(20, 19, 19);
 }
